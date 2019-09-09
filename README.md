@@ -1,11 +1,17 @@
-# tartan
+# Smart Home Platform
 
-The Tartan SmartHome Platform
+Development Procedure
+---
+A group project to develop, test and deploy a smart home platform that enables control over the house's illumination, locking mechanism, alarm systems etc.
+My contribution involved using test driven development (TDD) to develop and test the features regarding the interdependencies betwwen the states of the various sensors in the house.
+
+
+The Smart Home Platform
 ---
 This Dropwizard appllication is a RESTful service to control the Tartan SmartHome platform. 
 This depends on the IoTController library.
 
-How to start the tartan application
+How to start the smart home application
 ---
 
 In order for this to run properly, MySQL and one or more House Simulator (Hubs) have to be running on the 
