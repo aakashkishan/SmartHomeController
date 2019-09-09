@@ -1,0 +1,7 @@
+Flask
+six
+joblib
+sklearn
+pytz
+pandas
+pickle

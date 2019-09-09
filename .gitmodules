@@ -1,0 +1,6 @@
+[submodule "data-versioning"]
+	path = data-versioning
+	url = https://github.com/17-654-MSE-Analysis/data-versioning.git
+[submodule "model-versioning"]
+	path = model-versioning
+	url = https://github.com/17-654-MSE-Analysis/model-versioning.git

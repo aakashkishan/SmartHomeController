@@ -1,0 +1,58 @@
+version: '3'
+services:
+  house-mse: 
+    build: HouseSimulator/
+    ports:
+     - "5050:5050"
+    command: ["python3", "simple_server.py","0.0.0.0","5050"]
+  house-msit: 
+    build: HouseSimulator/
+    ports:
+     - "5051:5051"
+    command: ["python3", "simple_server.py","0.0.0.0","5051"]
+  house-cmu: 
+    build: HouseSimulator/
+    ports:
+     - "5052:5052"
+    command: ["python3", "simple_server.py","0.0.0.0","5052"]
+  house-isr: 
+    build: HouseSimulator/
+    ports:
+     - "5053:5053"
+    command: ["python3", "simple_server.py","0.0.0.0","5053"]
+  house-scs: 
+    build: HouseSimulator/
+    ports:
+     - "5054:5054"
+    command: ["python3", "simple_server.py","0.0.0.0","5054"]
+  house-ini: 
+    build: HouseSimulator/
+    ports:
+     - "5055:5055"
+    command: ["python3", "simple_server.py","0.0.0.0","5055"]
+  house-ece: 
+    build: HouseSimulator/
+    ports:
+     - "5056:5056"
+    command: ["python3", "simple_server.py","0.0.0.0","5056"]
+  platform:
+    build: Platform/
+    depends_on:
+     - "mysql-container"
+     - "house-cmu"
+     - "house-mse"
+     - "house-isr"
+     - "house-scs"
+     - "house-msit"
+    ports:
+     - "8080:8080"
+  mysql-container:
+    build: Database/
+    ports:
+     - "3306:3306"
+    volumes:
+     - mysql-storage:/var/lib/mysql
+
+
+volumes:
+  mysql-storage:

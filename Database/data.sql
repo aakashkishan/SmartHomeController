@@ -1,0 +1,3 @@
+insert into User (id, password, user_name) values ('9351', '123456', 'David'),('5037', '123456', 'Mary'),('990', '123456', 'Tom'),('1688', '123456', 'Jerry'),('3440', '123456', 'Mike'),('9419', '123456', 'Bob');
+
+insert into House (house_id, home_name, user_id, address, port, target_temp, alarm_delay, alarm_passcode) values ('1', 'mse', '9351', 'house-mse', '5050', '70', '30', 'stop'),('2', 'msit', '9351', 'house-msit', '5051', '70', '30', 'stop'),('3', 'cmu', '5037', 'house-cmu', '5052', '70', '30', 'stop'),('4', 'isr', '990', 'house-isr', '5053', '70', '30', 'stop'),('5', 'scs', '1688', 'house-scs', '5054', '70', '30', 'stop'),('6', 'ini', '3440', 'house-ini', '5055', '70', '30', 'stop'),('7', 'ece', '9419', 'house-ece', '5056', '70', '30', 'stop');
